@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .margins {
+       @apply 2xl:px-60
+    };
+}
