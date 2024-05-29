@@ -4,6 +4,24 @@
 
 @layer components {
     .margins {
-       @apply 2xl:px-60
+       @apply lg:px-28 2xl:px-60
     };
+
+    .effect-zoom {
+        @apply lg:hover:scale-105 lg:transition lg:duration-150 lg:ease-in-out
+    }
+
+    .btn-navbar-transicao {
+        @apply bg-gradient-to-r from-white to-white bg-no-repeat [background-position:0_100%] [background-size:100%_0.01em] 
+        motion-safe:transition-all motion-safe:duration-500 hover:[background-size:100%_100%] focus:[background-size:100%_100%] 
+        rounded-full hover:bg-white text-white border-2 border-white hover:text-cyan-600
+    };
+
+    .effect-underline {
+        @apply inline-block relative cursor-pointer transition-all duration-100 before:content-[''] before:absolute before:-bottom-1.5 before:left-1/2
+        before:-translate-x-1/2 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-gradient-to-r
+        before:from-cyan-500 before:to-cyan-500 hover:before:w-full hover:before:opacity-100
+    }
+
+    
 }
